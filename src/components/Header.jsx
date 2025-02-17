@@ -40,7 +40,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {["Home", "Events", "Workshops", "Gallery", "Contact"].map(
+            {["Home", "Events", "Workshops", "Merch","Gallery", "Contact"].map(
               (item) => (
                 <a
                   key={item}
@@ -97,7 +97,7 @@ export default function Header() {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              {["Home", "Events", "Workshops", "Gallery", "Contact"].map(
+              {["Home", "Events", "Workshops", "Merch","Gallery", "Contact"].map(
                 (item) => (
                   <a
                     key={item}

@@ -1,71 +1,127 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import ParallaxElement from "./ParallaxElement";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Layers() {
   const containerRef = useRef(null);
+  const backgroundRef = useRef(null);
+  const logoRef = useRef(null);
+  const titleRef = useRef(null);
+  const overlayRef = useRef(null);
+
+  
+
+  
 
   useGSAP(() => {
-    gsap.to("[data-speed]", {
-      y: (i, el) =>
-        -parseFloat(el.getAttribute("data-speed")) *
-        ScrollTrigger.maxScroll(window),
-      ease: "none",
-      scrollTrigger: {
-        start: 0,
-        end: "max",
-        invalidateOnRefresh: true,
-        scrub: 0,
-      },
+    const ctx = gsap.context(() => {
+      
+
+      // Main timeline for parallax
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "+=100%",
+          scrub: 1,
+          pin: true,
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+        }
+      });
+
+      // Background moves up with fade effect
+      tl.to(backgroundRef.current, {
+        yPercent: -50,
+        opacity: 0,
+        ease: "power1.inOut",
+      }, 0);
+
+      // Title moves up and fades
+      tl.to(titleRef.current, {
+        yPercent: -100,
+        opacity: 0,
+        ease: "power2.inOut"
+      }, 0);
+
+      // Logo moves up and fades
+      tl.to(logoRef.current, {
+        yPercent: -100,
+        scale: 0.8,
+        opacity: 0,
+        ease: "power2.inOut"
+      }, 0.2);
+
+      // Gradient overlay becomes more opaque
+      tl.to(".background-gradient", {
+        opacity: 1,
+        ease: "none"
+      }, 0);
     });
+
+    return () => ctx.revert();
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="relative min-h-[200vh] w-full overflow-hidden bg-black z-10 px-16 md:px-32 mx-auto"
-      id="home"
+      className="h-screen w-full overflow-hidden bg-black"
     >
-      <ParallaxElement
-        speed="0.25"
-        className="fixed top-0 right-0 w-full h-screen"
+      {/* Background Layer */}
+      <div
+        ref={backgroundRef}
+        className="absolute inset-0"
       >
         <div className="relative w-full h-full">
           <img
-            src="/Assets/1.jpg"
+            src="/1.jpg"
             alt="Background"  
             className="w-full h-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-500 ease-in-out" style={{ background: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 50%)' }} />
+          {/* Gradient overlay for smooth transition */}
+          <div 
+            className="background-gradient absolute inset-0 opacity-0"
+            style={{
+              background: `
+                linear-gradient(to bottom, 
+                  rgba(0, 0, 0, 0.3) 0%,
+                  rgba(0, 0, 0, 0.6) 50%,
+                  rgba(0, 0, 0, 0.9) 100%
+                )
+              `
+            }}
+          />
         </div>
-      </ParallaxElement>
+      </div>
 
-      <ParallaxElement
-        speed="0.15"
-        className="fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64"
+      {/* Logo Layer */}
+      <div
+        ref={logoRef}
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64"
       >
-        <img src="/logo_3D.png" alt="Logo" className="w-full  object-contain" />
-      </ParallaxElement>
+        <img 
+          src="/logo_3D.png" 
+          alt="Logo" 
+          className="w-full object-contain"
+        />
+      </div>
 
-      <ParallaxElement
-        speed="0.45"
-        className="fixed px-16 md:px-32 top-2/3 left-1/2 -translate-x-1/2 text-white text-6xl md:text-8xl font-bold text-center"
+      {/* Title Layer */}
+      <div
+        ref={titleRef}
+        className="absolute px-16 md:px-32 top-2/3 left-1/2 -translate-x-1/2 text-white text-6xl md:text-8xl font-bold text-center"
       >
-        <h1 className="font-poppins">PRAYUKTHA&apos;25</h1>
-      </ParallaxElement>
+        <h1 className="font-mono">PRAYUKTHA&apos;25</h1>
+      </div>
 
-      {/* <ParallaxElement
-        speed="0.55"
-        className="fixed top-4/5 left-1/2 -translate-x-1/2 text-white text-3xl md:text-4xl font-light"
-      >
-        <img src="/gh.png" alt="img2" className="w-full  object-contain" />
-      </ParallaxElement> */}
-
-      <div className="fixed inset-0 bg-black/30 pointer-events-none" />
+      {/* Base overlay */}
+      <div 
+        ref={overlayRef}
+        className="absolute inset-0 bg-black/30 pointer-events-none" 
+      />
     </div>
   );
 }

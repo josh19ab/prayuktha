@@ -15,6 +15,7 @@ const TransitionComponent = ({ children }) => {
         timeout={500}
         onEnter={(node) => {
           toggleCompleted(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
           gsap.set(node, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
           gsap
             .timeline({

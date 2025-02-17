@@ -10,33 +10,47 @@ const Gallery = ({ galleryRef }) => {
           {/* Gallery Image */}
           <div className="relative overflow-hidden rounded-lg aspect-square">
             <img
-              src="/LOGO_WHITE.png"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739793961/3_uvyl4d.jpg"
               alt="Gallery"
               className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300"
             />
           </div>
           <div className="relative overflow-hidden rounded-lg aspect-square">
             <img
-              src="/LOGO_WHITE.png"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739793961/4_hzunxj.jpg"
               alt="Gallery"
               className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300"
             />
           </div>
           <div className="relative overflow-hidden rounded-lg aspect-square">
             <img
-              src="/LOGO_WHITE.png"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739790590/valoLan_xohytq.jpg"
               alt="Gallery"
               className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300"
             />
           </div>
           <div className="relative overflow-hidden rounded-lg aspect-square">
             <img
-              src="/LOGO_WHITE.png"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739790601/waterDrum_upczfg.jpg"
               alt="Gallery"
               className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300"
             />
           </div>
-         
+          <div className="relative overflow-hidden rounded-lg aspect-square">
+            <img
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739793958/1_ubvmkf.jpg"
+              alt="Gallery"
+              className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300"
+            />
+          </div>
+          <div className="relative overflow-hidden rounded-lg aspect-square">
+            <img
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739794032/5_yczkeq.jpg"
+              alt="Gallery"
+              className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300"
+            />
+          </div>
+
           {/* Add more gallery images */}
         </div>
       </div>

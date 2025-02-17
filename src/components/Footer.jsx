@@ -15,7 +15,7 @@ const Footer = () => {
 
             <div className="flex space-x-4 pt-4">
               <a
-                href="https://www.instagram.com/prayuktha.bmce/"
+                href="https://www.instagram.com/prayuktha.bmc/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-purple-400 transition-colors"
@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="/"
+                  href="/#home"
                   className="text-gray-300 hover:text-purple-400 transition-colors"
                 >
                   Home
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/events"
+                  href="/#events"
                   className="text-gray-300 hover:text-purple-400 transition-colors"
                 >
                   Events
@@ -69,7 +69,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/gallery"
+                  href="/#merch"
+                  className="text-gray-300 hover:text-purple-400 transition-colors"
+                >
+                  Merchandise
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#gallery"
                   className="text-gray-300 hover:text-purple-400 transition-colors"
                 >
                   Gallery
@@ -77,7 +85,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="/#about"
                   className="text-gray-300 hover:text-purple-400 transition-colors"
                 >
                   About Us
@@ -128,10 +136,10 @@ const Footer = () => {
                   />
                 </svg>
                 <a
-                  href="mailto:contact@prayuktha.com"
+                  href="mailto:prayukthabmce@gmail.com"
                   className="text-gray-300 hover:text-purple-400 transition-colors"
                 >
-                  bm2coe@gmail.com
+                  prayukthabmce@gmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
