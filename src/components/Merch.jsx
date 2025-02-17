@@ -3,7 +3,7 @@ const Merch = ({ merchRef }) => {
   const sendMessage = () => {
     const phoneNumber = "7510237062"; // Replace with actual number
     const message = encodeURIComponent(
-      "Hello, I am interested in your tech fest!"
+      "Hello, I am interested in purchasing ypur tshirt as part of the merchandise in Prayuktha 25!"
     );
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 

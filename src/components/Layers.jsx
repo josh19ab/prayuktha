@@ -112,7 +112,7 @@ export default function Layers() {
       {/* Title Layer */}
       <div
         ref={titleRef}
-        className="absolute px-16 md:px-32 top-2/3 left-1/2 -translate-x-1/2 text-white text-6xl md:text-8xl font-bold text-center"
+        className="absolute px-32 md:px-32 top-2/3 left-1/2 -translate-x-1/2 text-white text-5xl md:text-8xl font-bold text-center"
       >
         <h1 className="font-mono">PRAYUKTHA&apos;25</h1>
       </div>

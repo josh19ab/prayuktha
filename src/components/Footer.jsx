@@ -30,7 +30,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/prayuktha.bmce/"
+                href="https://www.linkedin.com/company/astrrix/about/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-purple-400 transition-colors"
