@@ -10,19 +10,19 @@ import Gallery from "../components/Gallery";
 import Workshop from "../components/Workshop";
 import Esports from "../components/Esports";
 import Merch from "../components/Merch";
+import Sponsors from "../components/Sponsors";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const main = useRef(null);
-  const layersRef = useRef(null);
   const aboutRef = useRef();
   const eventsRef = useRef();
   const galleryRef = useRef();
   const workshopRef = useRef();
   const esportsRef = useRef();
   const merchRef = useRef();
-  const { completed } = useContext(TransitionContext);
+  const sponsorRef = useRef();
 
   useEffect(() => {
     // Scroll to top when component mounts
@@ -99,10 +99,11 @@ export default function Home() {
           ></div>
         </div>
 
-        {/* Content Container */}
-
         {/* About Section */}
         <About aboutRef={aboutRef} />
+
+        {/* About Section */}
+        <Sponsors sponsorRef={sponsorRef} />
 
         {/* Events Section */}
         <Events eventsRef={eventsRef} />

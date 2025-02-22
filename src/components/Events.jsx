@@ -59,7 +59,7 @@ const Events = ({ eventsRef }) => {
           {/* Tresure Hunt */}
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all">
             <img
-              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739596857/treasureHunt_ynnwmm.jpg"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1740242183/last_01_rjpk2q.jpg"
               alt="Event Name"
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -77,7 +77,7 @@ const Events = ({ eventsRef }) => {
           {/* Code Frenzy */}
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all">
             <img
-              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739598606/code_frenzy_nnpt0b.jpg"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1740242154/last_03_eabgns.jpg"
               alt="Event Name"
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -93,7 +93,7 @@ const Events = ({ eventsRef }) => {
           {/* Speed Typing */}
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all">
             <img
-              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739598587/speed_typing_bpaoqy.jpg"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1740242171/last_02_ulubfi.jpg"
               alt="Event Name"
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
