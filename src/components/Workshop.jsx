@@ -10,7 +10,7 @@ const Workshop = ({ workshopRef }) => {
           {/* 1 */}
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-all border border-white/30">
             <img
-              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1739794218/WOrkshop_i694w1.png"
+              src="https://res.cloudinary.com/djtzzg12a/image/upload/v1740242181/Workshop-poster_02_ojj82a.png"
               alt="Event Name"
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -22,7 +22,6 @@ const Workshop = ({ workshopRef }) => {
               learn how to protect yourself from cyber threats, secure your
               data, and stay ahead of hackers!
             </p>
-            
           </div>
           <div className="hidden md:block"></div>
         </div>
